@@ -2,7 +2,7 @@ package com.core.dbstore.util;
 
 import java.util.ResourceBundle;
 
-public class ReadConfig {
+public class Config {
 
 	public static void main(String args[]) {
 		readUsingResouceBundle();
