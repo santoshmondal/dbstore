@@ -4,6 +4,10 @@ import org.apache.log4j.AppenderSkeleton;
 import org.apache.log4j.spi.LocationInfo;
 import org.apache.log4j.spi.LoggingEvent;
 
+/*
+ * References
+ * http://stackoverflow.com/questions/6072389/how-to-create-a-own-appender-in-log4j/16194360#16194360
+ */
 public class CustomLog4jAppender extends AppenderSkeleton {
 
 	private String prop1;
