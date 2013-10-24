@@ -8,11 +8,13 @@ public class CommonLogger {
 	private static final Logger LOG = Logger.getLogger(CommonLogger.class);
 	private static final Logger LOG_FILE_STORE = Logger.getLogger("FILE_STORE");
 	private static final Logger LOG_DAILY_FILE_STORE = Logger.getLogger("DAILY_FILE_STORE");
+	private static final Logger LOG_CUSTOM = Logger.getLogger("CUSTOM");
 
 	public static void main(String args[]) {
 		demoRootLogger();
 		demoFileStoreLogger();
 		demoDailyFileStoreLogger();
+		demoCustomLogger();
 	}
 
 	public static void demoRootLogger() {
@@ -25,5 +27,9 @@ public class CommonLogger {
 
 	public static void demoDailyFileStoreLogger() {
 		LOG_DAILY_FILE_STORE.info("Daily_File_Store Logger Demo");
+	}
+
+	public static void demoCustomLogger() {
+		LOG_CUSTOM.info("Custom Logger Demo");
 	}
 }
