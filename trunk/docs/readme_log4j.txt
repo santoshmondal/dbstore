@@ -4,7 +4,8 @@ Log4j Component::
 	layout
 
 Logger::
-	logger lets you specify what to log. 
+	logger lets you specify what to log
+	it let you capture the logging information. 
 	logger can be root logger or custom logger.
 	custom logger required when you want to log in two different file.
 	while using custom logger, the parent logger also get the logging event what custom logger is getting.
