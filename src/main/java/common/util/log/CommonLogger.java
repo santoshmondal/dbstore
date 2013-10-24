@@ -2,6 +2,13 @@ package common.util.log;
 
 import org.apache.log4j.Logger;
 
+/**
+ * REFERENCE::
+ * http://veerasundar.com/blog/2009/08/log4j-tutorial-additivity-what-and-why/
+ * 
+ * @author santoshm
+ *
+ */
 public class CommonLogger {
 
 	// POINTS rootLogger
