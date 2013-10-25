@@ -12,20 +12,35 @@
 			<plugins>
 			</plugins>
 		</pluginManagement>
+
 	</build>
 
-	<dependencies>
+	<repositories>
+		<!-- local repository -->
+		<repository>
+			<id>in-project</id>
+			<name>project</name>
+			<url>file://C:/Users/santoshm/rediff/ws/tmpws/dbstore/lib</url>
+		</repository>
+	</repositories>
 
+	<dependencies>
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
-
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.26</version>
+		</dependency>
+
+		<!-- local dependency -->
+		<dependency>
+			<groupId>gid</groupId>
+			<artifactId>aid</artifactId>
+			<version>1.0</version>
 		</dependency>
 	</dependencies>
 
