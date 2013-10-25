@@ -37,7 +37,7 @@ http://stackoverflow.com/questions/6072389/how-to-create-a-own-appender-in-log4j
 
 
 /****************************************************************************************************/
-/*							log4j vs jul vs common logging vs  slf4j
+/*							log4j vs jul vs common-logging(jcl) vs slf4j
 /****************************************************************************************************/
 JUL :: A logger provided by the the jdk in the java.util.logger. 
 	JUL vs Log4j (http://java.sys-con.com/node/48541)
