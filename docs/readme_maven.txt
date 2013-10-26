@@ -62,7 +62,10 @@ Convert existing java project in maven based java project.
 
 	
 Convert existing web project in maven based web project.
-
+	Right Click on project ->Configure->Covert to Maven Project->
+	Select Packaging option war.
+	Referesh the buildpath libraries.
+	
 
 
 
@@ -91,7 +94,13 @@ Adding External libraries into the maven other than maven dependency.
 
 
 Import an existing Maven project into eclipse.
-
+	Right Click in the Project Explorer->
+	Import->
+	Maven->Existing Maven Projects->
+	Browse to the location of the maven project, till pom.xml
+	you are done.
+	
+	
 
 
 
