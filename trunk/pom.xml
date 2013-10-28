@@ -7,12 +7,10 @@
 
 	<build>
 		<defaultGoal>install</defaultGoal>
-
 		<pluginManagement>
 			<plugins>
 			</plugins>
 		</pluginManagement>
-
 	</build>
 
 	<repositories>
@@ -25,6 +23,13 @@
 	</repositories>
 
 	<dependencies>
+		<!-- local dependency -->
+		<dependency>
+			<groupId>gid</groupId>
+			<artifactId>aid</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -35,13 +40,13 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.26</version>
 		</dependency>
-
-		<!-- local dependency -->
 		<dependency>
-			<groupId>gid</groupId>
-			<artifactId>aid</artifactId>
-			<version>1.0</version>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4</version>
 		</dependency>
+
+
 	</dependencies>
 
 
