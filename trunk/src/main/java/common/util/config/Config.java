@@ -17,7 +17,7 @@ public class Config {
 		}
 	}
 
-	public static String getPrperty(String key) {
+	public static String getProperty(String key) {
 		try {
 			return RB_CONFIG.getString(key);
 		} catch (Exception e) {
@@ -28,6 +28,6 @@ public class Config {
 	}
 
 	public static void main(String[] args) {
-		LOG.info(getPrperty("test"));
+		LOG.info(getProperty("test"));
 	}
 }
