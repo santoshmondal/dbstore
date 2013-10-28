@@ -26,6 +26,7 @@ public class FileUtil {
 
 		FileWriter fw = new FileWriter(wFile, append);
 		BufferedWriter bw = new BufferedWriter(fw);
+		bw.write("\n");
 		bw.write(fileContent);
 		bw.close();
 
@@ -51,7 +52,7 @@ public class FileUtil {
 
 		String currentLine = br.readLine();
 		while (null != currentLine) {
-			fileContent += currentLine;
+			fileContent += currentLine + "\n";
 			currentLine = br.readLine();
 		}
 
@@ -61,6 +62,7 @@ public class FileUtil {
 
 	public static void main(String args[]) throws Exception {
 		//System.out.println(writeFile("external.properties", null, "hello", true));
-		System.out.println(readFile("packconfig.properties", "common/util/config", true));
+		// System.out.println(readFile("packconfig.properties", "common/util/config", true));
+		System.out.println(readFile("log4j.properties", null, true));
 	}
 }
