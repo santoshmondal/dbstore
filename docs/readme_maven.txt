@@ -28,7 +28,7 @@ Make java project using maven.
 		Check the option create simple project.
 		And choose the packaging option as jar. 
 		Fill the other required field.
-	Options-2
+	Options-2-(Preference)
 		New->Maven->Maven Project->
 		Dont check the option of create simple project.->
 		Click Next->
@@ -110,3 +110,17 @@ The problem related with goal while running the pom.xml.
 		<build>
 			<defaultGoal>install</defaultGoal>
 		</build>
+
+		
+How to change the sevlet-api version in the project facet?
+	go to navigator package explorer.
+	look for .settings folder
+	open the below file.
+		org.eclipse.wst.common.project.facet.core.xml
+	make appropriate changes
+	RightClick on the project->
+	Maven->
+	Update the Project.
+	(While updating update the xsd of the web.xml)
+	
+		
