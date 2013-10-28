@@ -22,7 +22,7 @@ import common.util.config.Config;
 
 public class MailUtil {
 
-	private static final Logger LOG = Logger.getLogger(MailUtil.class);
+	private static final Logger LOG = Logger.getLogger("EXTERNAL_SERVICE");
 	private static final Logger LOG_RECEPIENT = Logger.getLogger("LOG_RECEPIENT");
 
 	private static Properties properties = null;
