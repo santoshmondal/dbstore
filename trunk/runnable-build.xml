@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project dbstore with Jar-in-Jar Loader">
+	<!--this file was created by Eclipse Runnable JAR Export Wizard-->
+	<!--ANT 1.7 is required                                        -->
+	<property name="basedir" value="." />
+	<property name="maven_repos" value="C:/Users/santoshm/.m2/repository" />
+	<property name="target_class" value="${basedir}/target/classes" />
+	
+	<target name="create_run_jar">
+		<jar destfile="C:/Users/santoshm/Desktop/sample.jar">
+			<manifest>
+				<attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+				<attribute name="Rsrc-Main-Class" value="common.util.log.CommonLogger"/>
+				<attribute name="Class-Path" value="."/>
+				<attribute name="Rsrc-Class-Path" value="./ aid-1.0.jar log4j-1.2.17.jar mysql-connector-java-5.1.26.jar mail-1.4.jar activation-1.1.jar httpclient-4.3.jar httpcore-4.3.jar commons-logging-1.1.3.jar commons-codec-1.6.jar jackson-mapper-asl-1.9.13.jar jackson-core-asl-1.9.13.jar"/>
+			</manifest>
+			<zipfileset src="jar-in-jar-loader.zip"/>
+			<fileset dir="${target_class}"/>
+			<zipfileset dir="${maven_repos}\gid\aid\1.0" includes="aid-1.0.jar"/>
+			<zipfileset dir="${maven_repos}\log4j\log4j\1.2.17" includes="log4j-1.2.17.jar"/>
+			<zipfileset dir="${maven_repos}\mysql\mysql-connector-java\5.1.26" includes="mysql-connector-java-5.1.26.jar"/>
+			<zipfileset dir="${maven_repos}\javax\mail\mail\1.4" includes="mail-1.4.jar"/>
+			<zipfileset dir="${maven_repos}\javax\activation\activation\1.1" includes="activation-1.1.jar"/>
+			<zipfileset dir="${maven_repos}\org\apache\httpcomponents\httpclient\4.3" includes="httpclient-4.3.jar"/>
+			<zipfileset dir="${maven_repos}\org\apache\httpcomponents\httpcore\4.3" includes="httpcore-4.3.jar"/>
+			<zipfileset dir="${maven_repos}\commons-logging\commons-logging\1.1.3" includes="commons-logging-1.1.3.jar"/>
+			<zipfileset dir="${maven_repos}\commons-codec\commons-codec\1.6" includes="commons-codec-1.6.jar"/>
+			<zipfileset dir="${maven_repos}\org\codehaus\jackson\jackson-mapper-asl\1.9.13" includes="jackson-mapper-asl-1.9.13.jar"/>
+			<zipfileset dir="${maven_repos}\org\codehaus\jackson\jackson-core-asl\1.9.13" includes="jackson-core-asl-1.9.13.jar"/>
+		</jar>
+	</target>
+</project>
