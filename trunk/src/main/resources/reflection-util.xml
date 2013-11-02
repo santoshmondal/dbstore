@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reflection>
+	<dynamic-class>
+		<instance-name>first</instance-name>
+		<instance-class>common.util.reflection.HelloReflection1</instance-class>
+		<field name="param1" value="11" type="int" />
+		<field name="param2" value="vivek singh" type="string" />
+		<field name="param3" value="11.0" type="float" />
+	</dynamic-class>
+	
+	<dynamic-class>
+		<instance-name>second</instance-name>
+		<instance-class>common.util.reflection.HelloReflection2</instance-class>
+		<field name="param1" value="111" type="int" />
+		<field name="param2" value="vivekanand singh" type="string" />
+		<field name="param3" value="11.0" type="float" />
+	</dynamic-class>
+	
+</reflection>
