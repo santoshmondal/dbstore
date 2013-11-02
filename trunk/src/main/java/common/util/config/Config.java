@@ -1,5 +1,6 @@
 package common.util.config;
 
+import java.net.URL;
 import java.util.ResourceBundle;
 
 import org.apache.log4j.Logger;
@@ -25,6 +26,13 @@ public class Config {
 			return null;
 		}
 
+	}
+
+	public static String getCurrentClasspath() {
+		ClassLoader loader = Thread.currentThread().getContextClassLoader();
+		URL resource = loader.getResource("");
+		LOG.info(resource.getPath());
+		return resource.getPath();
 	}
 
 	public static void main(String[] args) {

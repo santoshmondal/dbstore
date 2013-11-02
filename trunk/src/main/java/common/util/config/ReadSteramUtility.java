@@ -3,6 +3,7 @@ package common.util.config;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.Properties;
 import java.util.PropertyResourceBundle;
 import java.util.ResourceBundle;
@@ -28,6 +29,7 @@ public class ReadSteramUtility {
 		readUsingResouceBundle();
 		readUsingPropResourceBundle();
 		readExternalProperty();
+		getCurrentClasspath();
 	}
 
 	public static void readUsingClass() {
@@ -108,5 +110,12 @@ public class ReadSteramUtility {
 		} catch (Exception e) {
 			LOG.error(e);
 		}
+	}
+
+	public static String getCurrentClasspath() {
+		ClassLoader loader = Thread.currentThread().getContextClassLoader();
+		URL resource = loader.getResource("");
+		LOG.info(resource.getPath());
+		return resource.getPath();
 	}
 }
