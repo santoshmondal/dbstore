@@ -102,7 +102,9 @@ Import an existing Maven project into eclipse.
 	
 	
 
-
+/****************************************************************************************************/
+/*								QnA
+/****************************************************************************************************/
 
 The problem related with goal while running the pom.xml.
 	No goals have been specified for this build. You must specify a valid lifecycle phase or a goal in the format <plugin-prefix>:<goal> or <plugin-group-id>:<plugin-artifact-id>[:<plugin-version>]:<goal>. Available lifecycle phases are: validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy, pre-site, site, post-site, site-deploy, pre-clean, clean, post-clean.
@@ -123,4 +125,51 @@ How to change the sevlet-api version in the project facet?
 	Update the Project.
 	(While updating update the xsd of the web.xml)
 	
+
+
+Maven change the target location of archive. 
+	First we need to decide we are building what archive jar or war or ...
+	Include the respective plugin into the pom.xml file.
+	For jar::
+		<plugin>
+			<artifactId>maven-jar-plugin</artifactId>
+			<version>2.3.2</version>
+			<configuration>
+				 <outputDirectory>${project.basedir}/usr/local/standalone/dbstore</outputDirectory>
+			</configuration>
+		</plugin>
+	Important is we need to add the 'outputDirectory' and specify the user defined location. 
+
+
+
+Maven include another maven project as dependencies.
+	Its simple.
+	Its as simple as including other dependencies.
+	The other maven project will be available by default into your local repository.
+	So you can include it as dependencies which is locally available. 
+
+
+Maven Runnable Jar. 
+	Refrence::
+		http://www.mkyong.com/maven/how-to-create-a-jar-file-with-maven/
+		http://www.javavids.com/video/how-to-create-runnable-jar-file-with-maven.html
+
 		
+Multiple Maven Module Handling:
+	Reference::
+	Tomeeplus source code.
+	http://codepioneer.wordpress.com/2012/12/12/create-maven-multi-module-roject-using-eclipse/ 
+	
+	Create a maven project without slecting any archetype.
+	The project type must contains the packageing "pom".
+	
+	Now create another project.
+	This time select project type is maven-module.
+	Now select the parent project to which it will be uses as module.
+	
+	Note::
+		pom.xml. of the parent project of type "pom"
+		this contains all the modules under the modules tag.
+		
+		pom.xml of the individual module.
+		it contains a reference of the parent project. 	
