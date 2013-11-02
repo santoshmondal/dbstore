@@ -33,6 +33,24 @@ public class FileUtil {
 		return true;
 	}
 
+	public static String readFile(String fileName) throws Exception {
+		return readFile(fileName, null);
+	}
+
+	public static String readFile(String fileName, String filePath) throws Exception {
+		return readFile(fileName, filePath, true);
+	}
+
+	/**
+	 * 
+	 * @param fileName
+	 * @param filePath
+	 * @param classpath true and it reads from the classpath. 
+	 * 					false means it read the external properties.  
+	 * 		  
+	 * @return
+	 * @throws Exception
+	 */
 	public static String readFile(String fileName, String filePath, boolean classpath) throws Exception {
 		String fileContent = "";
 
@@ -63,6 +81,6 @@ public class FileUtil {
 	public static void main(String args[]) throws Exception {
 		//System.out.println(writeFile("external.properties", null, "hello", true));
 		// System.out.println(readFile("packconfig.properties", "common/util/config", true));
-		System.out.println(readFile("log4j.properties", null, true));
+		System.out.println(readFile("config.properties"));
 	}
 }

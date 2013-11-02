@@ -3,12 +3,20 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>dbstore</groupId>
 	<artifactId>dbstore</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.3</version>
 
 	<build>
 		<defaultGoal>install</defaultGoal>
+		<!-- <directory>${project.basedir}/usr/local/standalone/dbstore</directory> -->
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>2.3.2</version>
+					<configuration>
+						<!-- <outputDirectory>${project.basedir}/usr/local/standalone/dbstore</outputDirectory> -->
+					</configuration>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
@@ -19,6 +27,12 @@
 			<id>in-project</id>
 			<name>project</name>
 			<url>file://C:/Users/santoshm/rediff/ws/tmpws/dbstore/lib</url>
+		</repository>
+		
+		<!-- FTP4j Repository -->
+		<repository>
+			<id>sauronsoftware-github</id>
+			<url>http://repo.laubenberger.net/maven2</url>
 		</repository>
 	</repositories>
 
@@ -62,6 +76,12 @@
 			<version>1.9.13</version>
 		</dependency>
 
+		<!-- FTP4j -->
+		<dependency>
+			<groupId>it.sauronsoftware</groupId>
+			<artifactId>ftp4j</artifactId>
+			<version>1.6</version>
+		</dependency>
 
 	</dependencies>
 
