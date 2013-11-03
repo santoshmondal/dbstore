@@ -12,10 +12,11 @@ PHASE2::
 
 PHASE3::
 	Producer Consumer::BlockingQueue, BlockingDeque
-	
+	Inter thread communication.
 	
 PHASE4::
 	FutureTask::Future
+	Join
 	
 
 PHASE5::
