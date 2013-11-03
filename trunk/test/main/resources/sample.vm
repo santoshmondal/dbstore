@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user>
+	<id>${object.uid}</id>
+	#if($!{object.uname})#*
+	*#<uname>${object.uname}</uname>#*
+	*##else
+	<uname/>
+	#end
+	<time>${DateTimeUtil.formatCurrentDate("dd-MM-yyyy")}</time>
+</user>
