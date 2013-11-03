@@ -2,20 +2,18 @@ package common.util.concurrent;
 
 public class DemoJoin2 {
 	public static void main(String args[]) throws InterruptedException {
-		// demo();
+		demo();
 
 		Runnable r = new Runnable() {
 			@Override
 			public void run() {
-				System.out.println(Thread.currentThread().getId()
-						+ " :: Started");
+				System.out.println(Thread.currentThread().getId() + " :: Started");
 				try {
 					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-				System.out.println(Thread.currentThread().getId()
-						+ " :: Finished");
+				System.out.println(Thread.currentThread().getId() + " :: Finished");
 			}
 		};
 		Thread t = new Thread(r);
