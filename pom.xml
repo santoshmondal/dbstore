@@ -23,12 +23,12 @@
 
 	<repositories>
 		<!-- local repository -->
-		<repository>
+		<!-- <repository>
 			<id>in-project</id>
 			<name>project</name>
 			<url>file://C:/Users/santoshm/rediff/ws/tmpws/dbstore/lib</url>
-		</repository>
-		
+		</repository> -->
+
 		<!-- FTP4j Repository -->
 		<repository>
 			<id>sauronsoftware-github</id>
@@ -38,11 +38,11 @@
 
 	<dependencies>
 		<!-- local dependency -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>gid</groupId>
 			<artifactId>aid</artifactId>
 			<version>1.0</version>
-		</dependency>
+		</dependency> -->
 
 		<dependency>
 			<groupId>log4j</groupId>
@@ -82,6 +82,14 @@
 			<artifactId>ftp4j</artifactId>
 			<version>1.6</version>
 		</dependency>
+
+		<!-- Velocity -->
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>1.7</version>
+		</dependency>
+
 
 	</dependencies>
 
