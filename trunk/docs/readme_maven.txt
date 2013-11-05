@@ -80,6 +80,12 @@ Adding External libraries into the maven other than maven dependency.
 			<name>project</name>
 			<url>file://C:/Users/santoshm/rediff/ws/tmpws/quickweb/lib</url>
 		</repository>
+		
+		<repository>
+			<id>in-project</id>
+			<name>project</name>
+			<url>file://${project.basedir}/lib</url>
+		</repository>
 	</repositories>
 	<dependencies>
 		<dependency>
@@ -139,8 +145,8 @@ Maven change the target location of archive.
 			</configuration>
 		</plugin>
 	Important is we need to add the 'outputDirectory' and specify the user defined location. 
-
-
+		
+	
 
 Maven include another maven project as dependencies.
 	Its simple.
@@ -154,6 +160,31 @@ Maven Runnable Jar.
 		http://www.mkyong.com/maven/how-to-create-a-jar-file-with-maven/
 		http://www.javavids.com/video/how-to-create-runnable-jar-file-with-maven.html
 
+		<!-- Runnable Jar plugin -->
+		<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<outputDirectory>${project.basedir}/var/ETLApps/build</outputDirectory>
+					<archive>
+						<manifest>
+							<mainClass>com.rediff.etl.util.MailSender</mainClass>
+						</manifest>
+					</archive>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		
+		
 		
 Multiple Maven Module Handling:
 	Reference::
