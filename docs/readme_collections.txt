@@ -22,3 +22,37 @@ List<Integer> myList = new ArrayList<Integer>(); // yes
 /****************************************************************************************************/
 /*								Basics of Collections
 /****************************************************************************************************/
+Collection
+Collections
+
+List
+	ArrayList
+	LinkedList
+	Vector
+	Stack
+	
+Queue
+	LinkedList
+	PriorityQueue
+	
+BlockingQueue
+	ArrayBlockingQueue
+	LinkedBlockingQueue
+	PriorityBlockingQueue
+	
+			Throws exception		Special value			Blocks			Times out
+Insert		add(e)					offer(e)				put(e)			offer(e, time, unit)
+Remove		remove()				poll()					take()			poll(time, unit)
+Examine		element()				peek()					N/A				N/A	
+	
+
+Set
+	HashSet
+	TreeSet
+	LinkedHashSet
+	
+Map
+	HashMap
+	HashTable
+	TreeHashMap
+	LinkedHashMap
