@@ -203,4 +203,15 @@ Multiple Maven Module Handling:
 		this contains all the modules under the modules tag.
 		
 		pom.xml of the individual module.
-		it contains a reference of the parent project. 	
+		it contains a reference of the parent project. 
+		
+		
+		
+Maven create war and jar together?
+Ans: http://communitygrids.blogspot.in/2007/11/maven-making-war-and-jar-at-same-time.html
+
+
+
+Maven and ANT task?
+Ans: http://stackoverflow.com/questions/586202/best-practices-for-copying-files-with-maven
+	
