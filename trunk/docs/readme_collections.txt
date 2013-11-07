@@ -35,7 +35,7 @@ Queue
 	LinkedList
 	PriorityQueue
 	
-BlockingQueue
+BlockingQueue	(Producer/Consumer)
 	ArrayBlockingQueue
 	LinkedBlockingQueue
 	PriorityBlockingQueue
