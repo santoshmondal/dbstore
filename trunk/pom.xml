@@ -23,11 +23,8 @@
 
 	<repositories>
 		<!-- local repository -->
-		<!-- <repository>
-			<id>in-project</id>
-			<name>project</name>
-			<url>file://C:/Users/santoshm/rediff/ws/tmpws/dbstore/lib</url>
-		</repository> -->
+		<!-- <repository> <id>in-project</id> <name>project</name> <url>file://C:/Users/santoshm/rediff/ws/tmpws/dbstore/lib</url> 
+			</repository> -->
 
 		<!-- FTP4j Repository -->
 		<repository>
@@ -38,11 +35,8 @@
 
 	<dependencies>
 		<!-- local dependency -->
-		<!-- <dependency>
-			<groupId>gid</groupId>
-			<artifactId>aid</artifactId>
-			<version>1.0</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>gid</groupId> <artifactId>aid</artifactId> <version>1.0</version> 
+			</dependency> -->
 
 		<dependency>
 			<groupId>log4j</groupId>
@@ -90,7 +84,25 @@
 			<version>1.7</version>
 		</dependency>
 
+		<!-- quartz -->
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+			<version>2.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz-jobs</artifactId>
+			<version>2.2.1</version>
+		</dependency>
 
+
+		<!-- JASPER -->
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>5.2.0</version>
+		</dependency>
 	</dependencies>
 
 
