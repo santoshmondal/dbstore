@@ -46,9 +46,8 @@ public class RegexUtil {
 		return null;
 	}
 
-	public static String[] wordSplit(String source) {
+	public static String[] wordSplit(String source, String pattern) {
 		if (!CommonUtil.isEmpty(source)) {
-			String pattern = "(\\w)(\\s+)";
 			return source.split(pattern);
 		}
 
@@ -56,8 +55,5 @@ public class RegexUtil {
 	}
 
 	public static void main(String[] args) {
-		String source = "HEllo 1	adf		adfa";
-		String[] output = wordSplit(source);
-		System.out.println(output);
 	}
 }
