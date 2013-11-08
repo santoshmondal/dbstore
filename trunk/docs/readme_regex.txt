@@ -1,6 +1,9 @@
 /****************************************************************************************************/
 /*								Basics of Regex
 /****************************************************************************************************/
+Reference::
+	http://tutorials.jenkov.com/java-regex/matcher.html
+	
 Regex Metachar
 	\d		Any digit, short for [0-9]
 	\D		A non-digit, short for [^0-9]
@@ -36,4 +39,16 @@ Common matching symbol:
 	$			Checks if a line end follows	
 	
 	
-			
+	
+	
+Greedy and reluctant behavior.
+
+Parsing a string and accessing each token. 
+	
+
+Exceptional need to understand.		
+	decode the following::group inside the group
+	((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})
+		
+	
+	
