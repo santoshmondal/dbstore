@@ -1,5 +1,5 @@
 /****************************************************************************************************/
-/*				Basics of Config.properties reading
+/*				Basics of Jasper reporting
 /****************************************************************************************************/
 Reference from downloaded jasper guide::
 	C:\Users\santoshm\rediff\Downloads\pentaho\jasper\jasperreports-5.5.0-project\jasperreports-5.5.0\docs
@@ -9,8 +9,10 @@ Reference from downloaded jasper guide::
 Sample Program from downloaded jasper::
 	C:\Users\santoshm\rediff\Downloads\pentaho\jasper\jasperreports-5.5.0-project\jasperreports-5.5.0\demo\samples
 	The above link contains the source code. The ant build help you to run your program without any knowledge.
-	It contains everything from .jrxml to java source code. 		
-
+	It contains everything from .jrxml to java source code.
+	Run the ant and enjoy reporting.  		
+	Run the webapp.war sample.
+	
 
 	
 IReport References::
