@@ -210,7 +210,8 @@ Multiple Maven Module Handling:
 Maven create war and jar together?
 Ans: http://communitygrids.blogspot.in/2007/11/maven-making-war-and-jar-at-same-time.html
 	http://preilly.me/2013/08/06/maven-making-both-a-war-and-jar-at-the-same-time/
-Put the following::
+
+	Put the following::
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
