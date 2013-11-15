@@ -30,6 +30,7 @@ public class ReadSteramUtility {
 		readUsingPropResourceBundle();
 		readExternalProperty();
 		getCurrentClasspath();
+		getFilefromCurrentClasspath();
 	}
 
 	public static void readUsingClass() {
@@ -117,5 +118,14 @@ public class ReadSteramUtility {
 		URL resource = loader.getResource("");
 		LOG.info(resource.getPath());
 		return resource.getPath();
+	}
+
+	public static String getFilefromCurrentClasspath() {
+		ClassLoader loader = Thread.currentThread().getContextClassLoader();
+		URL resource = loader.getResource("");
+		LOG.info(resource.getPath());
+		String filepath = resource.getPath() + "config.properties";
+		LOG.info(filepath);
+		return filepath;
 	}
 }
