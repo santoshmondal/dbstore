@@ -45,7 +45,7 @@ public class SimpleRegexDemo {
 		// String pattern = "(^ja)(.*)"; // true
 		// String pattern = "(^[iaj])(.*)"; // true
 		// String pattern = "(^ji)(.*)"; // false
-		String pattern = "(^[ji])(.*)"; // true
+		String pattern = "(^[Ji])(.*)"; // false (case sensitieve)
 		boolean output = source.matches(pattern);
 		System.out.println("outupt::" + output);
 
@@ -56,6 +56,11 @@ public class SimpleRegexDemo {
 		pattern = "(.*)([abc]$)"; // false
 		output = source.matches(pattern);
 		System.out.println("test2::" + output);
+
+		pattern = "(?i)(^Jai)(.*)";
+		output = source.matches(pattern);
+		System.out.println("test3::" + output);
+
 	}
 
 	public static void patternMatcherBasics() {
@@ -127,7 +132,7 @@ public class SimpleRegexDemo {
 	}
 
 	public static void main(String[] args) {
-		patternMacherParser();
+		matchesRegexDemo();
 	}
 
 }
