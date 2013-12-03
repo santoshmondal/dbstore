@@ -1,3 +1,4 @@
+
 <BulkTrackingResponse
 	xmlns="http://schemas.datacontract.org/2004/07/GetSetRed" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
 	<BulkResponse>
@@ -6,93 +7,87 @@
 			</ActionRemarks>
 			<ChargeableWeight>0.50</ChargeableWeight>
 			<Commodity>GEN : GENERAL</Commodity>
-			<ConsigneeAddress>E-120,</ConsigneeAddress>
-			<ConsigneeCity>GHAZIABAD</ConsigneeCity>
-			<ConsigneeLocality>SANJAY NAGAR SEC 23</ConsigneeLocality>
-			<ConsigneeName>SAHGAL SINGH</ConsigneeName>
-			<ConsigneePincode>201002</ConsigneePincode>
-			<DestinationBranch>GHAZIABAD SDC</DestinationBranch>
+			<ConsigneeAddress>1753/30, gopal ganj, nagra, ajmer null-
+			</ConsigneeAddress>
+			<ConsigneeCity>AJMER</ConsigneeCity>
+			<ConsigneeLocality>305008</ConsigneeLocality>
+			<ConsigneeName>Himanshu Sharma</ConsigneeName>
+			<ConsigneePincode>305008</ConsigneePincode>
+			<DestinationBranch>AJMER SDC</DestinationBranch>
 			<GrossWeight>0.50</GrossWeight>
-			<MessageReference>d708f611-4d45-4823-80d2-26aeb8250b18
+			<MessageReference>8c2f3b93-5b50-4551-a1f8-fbaea54bd9c1
 			</MessageReference>
 			<NoOfPieces>1</NoOfPieces>
-			<OriginBranch>LAXMI NAGAR SDC</OriginBranch>
-			<ReferenceNo>RDF000008</ReferenceNo>
-			<ShipperAddress>358-A/1, TELIWARA, SHAHDARA</ShipperAddress>
+			<OriginBranch>KIRTI NAGAR SDC</OriginBranch>
+			<ReferenceNo>RDF000005</ReferenceNo>
+			<ShipperAddress>SUMIT SHARMA / RAJEEV SHARMA, 329, Vishal Tower,
+				District Centre, Jan</ShipperAddress>
 			<ShipperCity>DELHI</ShipperCity>
-			<ShipperLocality>SHAHDARA</ShipperLocality>
-			<ShipperName>GAUBA TRADERS</ShipperName>
-			<ShipperPincode>110032</ShipperPincode>
-			<TrackingID>00680539</TrackingID>
+			<ShipperLocality>JANAKPURI</ShipperLocality>
+			<ShipperName>Pearl Technologies</ShipperName>
+			<ShipperPincode>110058</ShipperPincode>
+			<TrackingID>RDF000005</TrackingID>
 			<TrackingLevel>ALL_DETAILS</TrackingLevel>
 			<TrackingList>
 				<TrackingList>
-					<ExecutionDate>10/22/2013 12:00:00 AM</ExecutionDate>
-					<ExecutionTime>19:19</ExecutionTime>
+					<ExecutionDate>11/18/2013 12:00:00 AM</ExecutionDate>
+					<ExecutionTime>10:29</ExecutionTime>
 					<NoOfPieces>1</NoOfPieces>
-					<ServiceEvent>Delivered - [ SUNITA ]</ServiceEvent>
-					<StatusCode>Delivered</StatusCode>
-					<TrackingCode>DLVD</TrackingCode>
-				</TrackingList>
-				<TrackingList>
-					<ExecutionDate>10/22/2013 12:00:00 AM</ExecutionDate>
-					<ExecutionTime>10:49</ExecutionTime>
-					<NoOfPieces>1</NoOfPieces>
-					<ServiceEvent>Out for Delivery at GHAZIABAD SDC</ServiceEvent>
+					<ServiceEvent>Out for Delivery at AJMER SDC</ServiceEvent>
 					<StatusCode>Out for Delivery</StatusCode>
 					<TrackingCode>OFD</TrackingCode>
 				</TrackingList>
 				<TrackingList>
-					<ExecutionDate>10/22/2013 12:00:00 AM</ExecutionDate>
-					<ExecutionTime>00:22</ExecutionTime>
+					<ExecutionDate>11/16/2013 12:00:00 AM</ExecutionDate>
+					<ExecutionTime>16:39</ExecutionTime>
 					<NoOfPieces>1</NoOfPieces>
 					<ServiceEvent>Departed from MAHIPALPUR MDC [MDC]</ServiceEvent>
 					<StatusCode>In Transit</StatusCode>
 					<TrackingCode>DEP</TrackingCode>
 				</TrackingList>
 				<TrackingList>
-					<ExecutionDate>10/22/2013 12:00:00 AM</ExecutionDate>
-					<ExecutionTime>00:21</ExecutionTime>
+					<ExecutionDate>11/16/2013 12:00:00 AM</ExecutionDate>
+					<ExecutionTime>11:19</ExecutionTime>
 					<NoOfPieces>1</NoOfPieces>
 					<ServiceEvent>Processed at MAHIPALPUR MDC [MDC]</ServiceEvent>
 					<StatusCode>In Transit</StatusCode>
 					<TrackingCode>RED</TrackingCode>
 				</TrackingList>
 				<TrackingList>
-					<ExecutionDate>10/21/2013 12:00:00 AM</ExecutionDate>
-					<ExecutionTime>22:53</ExecutionTime>
+					<ExecutionDate>11/15/2013 12:00:00 AM</ExecutionDate>
+					<ExecutionTime>23:34</ExecutionTime>
 					<NoOfPieces>1</NoOfPieces>
 					<ServiceEvent>Reached at MAHIPALPUR MDC [MDC]</ServiceEvent>
 					<StatusCode>In Transit</StatusCode>
 					<TrackingCode>TRN</TrackingCode>
 				</TrackingList>
 				<TrackingList>
-					<ExecutionDate>10/21/2013 12:00:00 AM</ExecutionDate>
-					<ExecutionTime>21:38</ExecutionTime>
+					<ExecutionDate>11/15/2013 12:00:00 AM</ExecutionDate>
+					<ExecutionTime>22:26</ExecutionTime>
 					<NoOfPieces>1</NoOfPieces>
-					<ServiceEvent>Departed from LAXMI NAGAR SDC [SDC]</ServiceEvent>
+					<ServiceEvent>Departed from KIRTI NAGAR SDC [SDC]</ServiceEvent>
 					<StatusCode>In Transit</StatusCode>
 					<TrackingCode>DEP</TrackingCode>
 				</TrackingList>
 				<TrackingList>
-					<ExecutionDate>10/21/2013 12:00:00 AM</ExecutionDate>
-					<ExecutionTime>21:11</ExecutionTime>
+					<ExecutionDate>11/15/2013 12:00:00 AM</ExecutionDate>
+					<ExecutionTime>21:32</ExecutionTime>
 					<NoOfPieces>1</NoOfPieces>
-					<ServiceEvent>Processed at LAXMI NAGAR SDC [SDC]</ServiceEvent>
+					<ServiceEvent>Processed at KIRTI NAGAR SDC [SDC]</ServiceEvent>
 					<StatusCode>In Transit</StatusCode>
 					<TrackingCode>RED</TrackingCode>
 				</TrackingList>
 				<TrackingList>
-					<ExecutionDate>10/21/2013 12:00:00 AM</ExecutionDate>
-					<ExecutionTime>15:57</ExecutionTime>
+					<ExecutionDate>11/15/2013 12:00:00 AM</ExecutionDate>
+					<ExecutionTime>21:03</ExecutionTime>
 					<NoOfPieces>1</NoOfPieces>
-					<ServiceEvent>Reached at LAXMI NAGAR SDC</ServiceEvent>
+					<ServiceEvent>Reached at KIRTI NAGAR SDC</ServiceEvent>
 					<StatusCode>Booked</StatusCode>
 					<TrackingCode>PRO</TrackingCode>
 				</TrackingList>
 				<TrackingList>
-					<ExecutionDate>10/21/2013 12:00:00 AM</ExecutionDate>
-					<ExecutionTime>15:43</ExecutionTime>
+					<ExecutionDate>11/15/2013 12:00:00 AM</ExecutionDate>
+					<ExecutionTime>18:10</ExecutionTime>
 					<NoOfPieces>1</NoOfPieces>
 					<ServiceEvent>Booked</ServiceEvent>
 					<StatusCode>Booked</StatusCode>
@@ -101,7 +96,7 @@
 			</TrackingList>
 			<UserID>C00176943856</UserID>
 			<VolumeWeight>0.25</VolumeWeight>
-			<WaybillNo>680539</WaybillNo>
+			<WaybillNo>792186</WaybillNo>
 		</TrackingResponse>
 	</BulkResponse>
 </BulkTrackingResponse>
