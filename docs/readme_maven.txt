@@ -72,6 +72,7 @@ Convert existing web project in maven based web project.
 Adding External libraries into the maven other than maven dependency.
 	http://stackoverflow.com/questions/5692256/maven-best-way-of-linking-custom-external-jar-to-my-project
 	Refer::https://devcenter.heroku.com/articles/local-maven-dependencies
+	http://www.tutorialspoint.com/maven/maven_external_dependencies.htm (good one)
 	
 	create folder::lib/gid/aid/version/aid-version.jar
 	<repositories>
@@ -94,6 +95,15 @@ Adding External libraries into the maven other than maven dependency.
 				<version>1.0</version>
 		</dependency>
 	</dependencies>
+	
+	OOOOOORRRRR
+	<dependency>
+		<groupId>daas</groupId>
+		<artifactId>daas</artifactId>
+		<version>1.0</version>
+		<scope>system</scope>
+		<systemPath>${basedir}\lib\DatastoreAsService.jar</systemPath>
+	</dependency>
 
 
 
@@ -229,7 +239,104 @@ Ans: http://communitygrids.blogspot.in/2007/11/maven-making-war-and-jar-at-same-
 		</plugins>
 
 
+NB::
+	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-install-plugin</artifactId>
+		<executions>
+			<execution>
+				<phase>install</phase>
+				<goals>
+					<goal>install-file</goal>
+				</goals>
+				<configuration>
+					<packaging>jar</packaging>
+					<artifactId>${project.artifactId}</artifactId>
+					<groupId>${project.groupId}</groupId>
+					<version>${project.version}</version>
+					<file>
+						${project.build.directory}/${project.artifactId}-${project.version}.jar
+					</file>
+				</configuration>
+			</execution>
+		</executions>
+	</plugin>
+		
 
 Maven and ANT task?
 Ans: http://stackoverflow.com/questions/586202/best-practices-for-copying-files-with-maven
+http://stackoverflow.com/questions/2623632/execute-ant-task-with-maven
+Ref::
+	<plugin>
+		<artifactId>maven-antrun-plugin</artifactId>
+		<version>1.7</version>
+		<configuration>
+			<tasks>
+				<copy file="${basedir}/AppConstant.properties" tofile="${basedir}/var/ETLApps/build/AppConstant.properties" />
+				<copy file="${basedir}/ApplicationLog4j.properties" tofile="${basedir}/var/ETLApps/build/ApplicationLog4j.properties" />
+			</tasks>
+		</configuration>
+		<executions>
+			<execution>
+				<phase>install</phase>
+				<goals>
+					<goal>run</goal>
+				</goals>
+			</execution>
+		</executions>
+	</plugin>
+
+
+
+Maven dependency in classpath problem?
+Ref:http://stackoverflow.com/questions/7071470/maven-does-not-add-classpath-to-eclipse-project
+
+	<classpathentry exported="true" kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	
+	
+Java Maven Project appears in another project as directory not a jar
+Ref::http://stackoverflow.com/questions/18257218/java-maven-project-appears-in-another-project-as-directory-not-a-jar
+
+
+
+
+Maven--dependency managment understanding??
+Ans:: <dependency>
+			<groupId>daas-maven</groupId>
+			<artifactId>daas-maven</artifactId>
+			<version>0.0.3</version>
+			<exclusions>
+				<exclusion>
+					<groupId>*</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+
+Maven packaging without test (skip tests)??
+Ref:: http://stackoverflow.com/questions/7456006/maven-packaging-without-test-skip-tests
+Anss:: 
+	<plugin>
+	  <groupId>org.apache.maven.plugins</groupId>
+	  <artifactId>maven-surefire-plugin</artifactId>
+	  <configuration>
+	    <skipTests>true</skipTests>
+	  </configuration>
+	</plugin>
+
+
+Maven--Changing the project facet?
+like java 5 to java 7.
+servlet specification.
+rest specification.
+Ans:: pending.
+
+	
 	
