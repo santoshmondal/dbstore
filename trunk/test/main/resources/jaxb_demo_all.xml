@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<jaxb-root id="1">
-    <simple_value>coool</simple_value>
-    <Uname>raju</Uname>
-    <xml-list>Java jsp</xml-list>
+<jaxb-root id="1" xmlns="http://www.test.com">
+    <simple_value><![CDATA[coool]]></simple_value>
+    <Uname><![CDATA[!@#<>&]]></Uname>
+    <xml-list><![CDATA[Java &amp; jsp]]></xml-list>
     <certificate-list>
-        <certificate>Java</certificate>
-        <certificate>jsp</certificate>
+        <certificate><![CDATA[Java]]></certificate>
+        <certificate><![CDATA[jspppss]]></certificate>
     </certificate-list>
 </jaxb-root>
