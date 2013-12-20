@@ -11,6 +11,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
+import org.eclipse.persistence.oxm.annotations.XmlCDATA;
+
 @XmlRootElement(name = "jaxb-root")
 @XmlType(propOrder = { "id", "simpleValue", "uname", "xDemoList", "certificateList" })
 public class JaxbDemoBean implements Serializable {
@@ -35,6 +37,7 @@ public class JaxbDemoBean implements Serializable {
 	}
 
 	// @XmlValue
+	@XmlCDATA
 	@XmlElement(name = "simple_value")
 	public String getSimpleValue() {
 		return simpleValue;
@@ -44,6 +47,7 @@ public class JaxbDemoBean implements Serializable {
 		this.simpleValue = simpleValue;
 	}
 
+	@XmlCDATA
 	@XmlElement(name = "uname")
 	public String getUname() {
 		return uname;
@@ -63,6 +67,7 @@ public class JaxbDemoBean implements Serializable {
 	}
 
 	@XmlElementWrapper(name = "certificate-list")
+	@XmlCDATA
 	@XmlElement(name = "certificate")
 	public List<String> getCertificateList() {
 		return certificateList;
@@ -73,6 +78,7 @@ public class JaxbDemoBean implements Serializable {
 	}
 
 	@XmlList
+	@XmlCDATA
 	@XmlElement(name = "xml-list")
 	public List<String> getxDemoList() {
 		return xDemoList;

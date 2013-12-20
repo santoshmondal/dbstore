@@ -1,6 +1,5 @@
 package common.util.jaxb;
 
-import java.io.FileNotFoundException;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.ArrayList;
@@ -29,6 +28,7 @@ public class JaxbAllDemo {
 		JAXBContext jaxbInstance = JAXBContext.newInstance(forName);
 		Marshaller jaxbMarshaler = jaxbInstance.createMarshaller();
 		jaxbMarshaler.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+		jaxbMarshaler.setProperty(Marshaller.JAXB_FRAGMENT, true);
 
 		StringWriter xml = new StringWriter();
 		jaxbMarshaler.marshal(instance, xml);
@@ -37,7 +37,7 @@ public class JaxbAllDemo {
 	}
 
 	public static Object jaxbCustomUnMarshaller(String fullyQualifiedClassName, String xml) throws JAXBException, ClassNotFoundException,
-			FileNotFoundException, XMLStreamException {
+			XMLStreamException {
 
 		Class<?> forName = Class.forName(fullyQualifiedClassName);
 
@@ -71,14 +71,14 @@ public class JaxbAllDemo {
 	}
 
 	public static void main(String[] args) throws Exception {
-		unmarshalFromXmlFile();
+		rootBeanDemo();
 	}
 
-	public static void simplestOnlyRoot() throws Exception {
+	public static void simpleDemo() throws Exception {
 		JaxbDemoBean instance = new JaxbDemoBean();
 		instance.setId(1);
 		instance.setPassword("raj");
-		instance.setUname("raju");
+		instance.setUname("raju<>&!@#$%^*()");
 		instance.setSimpleValue("coool");
 		List<String> list = new ArrayList<String>();
 		list.add("Java");
@@ -98,6 +98,36 @@ public class JaxbAllDemo {
 
 		JaxbDemoBean instance = (JaxbDemoBean) JaxbAllDemo.jaxbCustomUnMarshaller(JaxbDemoBean.class.getName(), xml);
 		log.info(instance);
+	}
+
+	public static void rootBeanDemo() throws Exception {
+		Root instance = new Root();
+		instance.setA("A");
+		instance.setB("BB");
+		instance.setC("CCC");
+
+		String xml = JaxbAllDemo.jaxbCustomMarshaller(Root.class.getName(), instance);
+		log.info(xml);
+
+		instance = (Root) JaxbAllDemo.jaxbCustomUnMarshaller(Root.class.getName(), xml);
+		log.info(instance);
+
+		xml = FileUtil.readFile("rootbean1.xml");
+
+		instance = (Root) JaxbAllDemo.jaxbCustomUnMarshaller(Root.class.getName(), xml);
+		log.info(instance);
+	}
+
+	public static void webXmlDemo() {
+		try {
+			String xml = FileUtil.readFile("web.xml");
+
+			JaxbWebXml instance = (JaxbWebXml) JaxbAllDemo.jaxbCustomUnMarshaller(JaxbWebXml.class.getName(), xml);
+			log.info(instance);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
