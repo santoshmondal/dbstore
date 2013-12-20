@@ -144,6 +144,14 @@
 			<version>5.8.0</version>
 		</dependency>
 
+
+		<!-- jaxb-eclipselink -->
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>eclipselink</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+
 	</dependencies>
 
 
