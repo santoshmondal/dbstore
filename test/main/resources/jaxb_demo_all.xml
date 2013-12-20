@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jaxb-root id="1">
+    <simple_value>coool</simple_value>
+    <Uname>raju</Uname>
+    <xml-list>Java jsp</xml-list>
+    <certificate-list>
+        <certificate>Java</certificate>
+        <certificate>jsp</certificate>
+    </certificate-list>
+</jaxb-root>
