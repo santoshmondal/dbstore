@@ -3,29 +3,38 @@ package common.util.json;
 import java.io.IOException;
 
 import org.apache.log4j.Logger;
-import org.codehaus.jackson.JsonGenerationException;
-import org.codehaus.jackson.map.JsonMappingException;
-import org.codehaus.jackson.map.ObjectMapper;
+
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class JsonUtil {
 
 	private static final Logger LOG = Logger.getLogger("EXTERNAL_SERVICE");
+	private static final ObjectMapper mapper = new ObjectMapper();
+	static {
+		mapper.setSerializationInclusion(Include.NON_NULL);
+		mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+	}
 
 	public static Object jsonToObject(String json, String fullyQualifiedClassName) {
-		ObjectMapper mapper = new ObjectMapper();
-
+		Class<?> jsonClass;
 		try {
-			Class<?> jsonClass = Class.forName(fullyQualifiedClassName);
+			jsonClass = Class.forName(fullyQualifiedClassName);
 			return mapper.readValue(json, jsonClass);
-		} catch (JsonGenerationException e) {
-			LOG.error(e);
-		} catch (JsonMappingException e) {
-			LOG.error(e);
-		} catch (IOException e) {
-			LOG.error(e);
 		} catch (ClassNotFoundException e) {
-			LOG.error(e);
+			e.printStackTrace();
+		} catch (JsonParseException e) {
+			e.printStackTrace();
+		} catch (JsonMappingException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
+
 		return null;
 	}
 
@@ -34,13 +43,8 @@ public class JsonUtil {
 
 		try {
 			return mapper.writeValueAsString(object);
-
-		} catch (JsonGenerationException e) {
-			LOG.error(e);
-		} catch (JsonMappingException e) {
-			LOG.error(e);
-		} catch (IOException e) {
-			LOG.error(e);
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
 		}
 
 		return null;

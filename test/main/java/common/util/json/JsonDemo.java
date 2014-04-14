@@ -11,13 +11,14 @@ public class JsonDemo {
 	private static final Logger LOG = Logger.getLogger(JsonDemo.class);
 
 	public static void main(String args[]) {
-		//jsonToObject();
-		objectToJson();
+		jsonToObject();
+		// objectToJson();
 	}
 
 	public static void jsonToObject() {
 		try {
 			String json = FileUtil.readFile("user.json", null, true);
+			json = "{\"age\":29, \"id\":123}";
 			User user = (User) JsonUtil.jsonToObject(json, User.class.getName());
 			LOG.info(user);
 		} catch (Exception e) {
