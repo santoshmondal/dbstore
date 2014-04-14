@@ -39,7 +39,6 @@ public class JsonUtil {
 	}
 
 	public static String objectToJson(Object object) {
-		ObjectMapper mapper = new ObjectMapper();
 
 		try {
 			return mapper.writeValueAsString(object);
